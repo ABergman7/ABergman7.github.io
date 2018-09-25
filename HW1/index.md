@@ -7,7 +7,11 @@ layout: default
 ## Homework 1
 
 For this homework we are tasked to learn and apply our current fundamental knowledge of HTML, CSS, and Git. We are also tasked
-to use bootstrap for help in creating a decent looking website. 
+to use bootstrap for help in creating a decent looking website. Below are the following links to the assignment, repository, and the demo of the website.
+
+1. [Assignment](http://www.wou.edu/~morses/classes/cs46x/assignments/HW1.html)
+2. [Repository](https://github.com/ABergman7/ABergman7.github.io)
+
 
 ### Git
 
@@ -36,34 +40,28 @@ git push -u origin master
 ```
 
 ### HTML
-
+#### Bootstrap
 ```html
 <!DOCTYPE html> 
+<html lang= "en">
 
-<HTML>
 <head>
+    <title>Austin Bergman</title>
     <!--------------------------------bootstrap------------------------------------>
     
+    <!-- Latest compiled and minified CSS -->
     <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.37/css/bootstrap.min.css">
+    
+    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-    <title> Homework 1</title>
-    <!-------------------load  CSS file ----------------------------------------->
+    
+    <!------------------- CSS ----------------------------------------->
     <link rel="stylesheet" type="text/css" href="Style.css">
-    </head>
-     <body>
     
-    <div class="header">
-        <h1>Homework 1</h1>
-        </div>
-        <p>For this homework we are tasked to learn and apply our current fundamental knowledge of HTML, CSS, and Git. </p>
-    
-    
-    
-    
-    
-    </body>
-    
-</HTML>
 ```
+After loading bootstrap 
+
