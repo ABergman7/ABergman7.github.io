@@ -1,9 +1,10 @@
 /* CSS Style Sheet */
 
 body{
-    background-color: #2e3035;
+    background-color: #ffffff;
     text-decoration: none;
-    color:  #eaf2f2;
+    color:  #07090f;
+    
 }
 
 
@@ -13,41 +14,28 @@ body{
     color: #eaf2f2; 
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #474a51;
-}
 
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: #eaf2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-li a:hover:not(.active) {
-    background-color: #2e3035;
-}
-
-a {
-    display: block;
-    padding: 8px;
-    background-color:  #474a51;
-}
-.active{
-    background-color: #6d89e5;
-    
-}
-
-.container{
+.container-fluid{
     width: 75%;
+    background-color: #c6a995; 
 }
+img{
+    width: 100%;
+    height: auto;
+    border-color: #c6a995;
+    border-radius: 10px;
+}
+.content{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: #c6a995;
+    border-radius: 10px;
+    margin: 20px;
+    opacity: .91;
+}
+
+
 
 
