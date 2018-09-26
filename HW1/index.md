@@ -23,6 +23,7 @@ and then cloned our repository to our machine. The following is the code for the
 cd Desktop/HW460
 mkdir repos
 cd repos
+git init
 git clone https://github.com/ABergman7/ABergman7.github.io.git
 cd ABergman7.github.io
 
