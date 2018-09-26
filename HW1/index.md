@@ -69,13 +69,13 @@ Below is the HTML of my home webpage with Bootstrap (no absolute path to any web
                 <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="Home.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="page2.html">Photos</a>
+                            <a class="nav-link" href="Photos.html">Photos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="page3.html">RSVP</a>
+                            <a class="nav-link" href="RSVP.html">RSVP</a>
                         </li>
                     </ul>
             </nav>
@@ -89,7 +89,7 @@ Below is the HTML of my home webpage with Bootstrap (no absolute path to any web
             </div>    
             
         </div>
-</body> 
+</body>
 ```
 ### Multicolumn
 What I wanted for the second page was to have one big picture at the top followed by a two columns of other pictures. The html code for that is below:
