@@ -11,7 +11,7 @@ to use bootstrap for help in creating a decent looking website. Below are the fo
 
 1. [Assignment](http://www.wou.edu/~morses/classes/cs46x/assignments/HW1.html)
 2. [Repository](https://github.com/ABergman7/ABergman7.github.io)
-3. [Demo](HW1/Home.html)
+3. [Demo](/Home.html)
 
 ### Git
 
