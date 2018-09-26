@@ -10,6 +10,6 @@ All my code can be found in my personal [Repository](https://github.com/ABergman
 
 
 ## Senior Seminar Homework
-[Homework 1](https://github.com/ABergman7/ABergman7.github.io/blob/master/HW1/index.md)
+[Homework 1](HW1/index.md): HTML, CSS, GIT and Bootstrap
 
 
