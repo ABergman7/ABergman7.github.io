@@ -132,7 +132,7 @@ What I wanted for the second page was to have one big picture at the top followe
             </div>
         </div>
 ```
-As for the styling I wanted to but a colorful "rustic" kind of color only around content to my choosing. So I made the content class in CSS in order to help make things stand out more. 
+As for the styling I wanted to make a colorful "rustic" frame only around content to my choosing. So I made the content class in CSS in order to help make things stand out more. 
 
 Below is the overall code that I used for my style.css:
 
