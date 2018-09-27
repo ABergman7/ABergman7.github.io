@@ -1,4 +1,7 @@
-## Austin Bergman
+---
+title: Austin Bergman
+layout: default
+---
 
 This page is my personal portfolio for my code for my senior sequence 
 
