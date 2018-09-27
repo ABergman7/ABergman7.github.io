@@ -19,5 +19,5 @@ All my code can be found in my personal [Repository](https://github.com/ABergman
 
 1.[Homework 1](HW1/index.md): HTML, CSS, GIT and Bootstrap
 
-2.[Homework 2](HW2/index.md): Javascript, JQuery
+2.[Homework 2](HW2/h2index.md): Javascript, JQuery
 
