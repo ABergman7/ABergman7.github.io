@@ -17,7 +17,8 @@ All my code can be found in my personal [Repository](https://github.com/ABergman
 
 ## Senior Seminar Homework
 
-1.[Homework 1](HW1/index.md): HTML, CSS, GIT and Bootstrap
+1.[Homework 1](HW1/hw1blog.md): HTML, CSS, GIT and Bootstrap
 
 2.[Homework 2](HW2/h2index.md): Javascript, JQuery
+
 
