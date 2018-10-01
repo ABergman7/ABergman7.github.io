@@ -1,6 +1,6 @@
 function addNewCard(){
-    var word = document.getElementById('wordInput').value;
-    var define = document.getElementById('defInput').value;
+    var word = document.getElementById('word').value;
+    var define = document.getElementById('defin').value;
     
     
     
