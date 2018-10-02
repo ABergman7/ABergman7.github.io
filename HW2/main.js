@@ -1,10 +1,20 @@
-function addNewCard(){
-    var word = document.getElementById('word').value;
-    var define = document.getElementById('defin').value;
+function main(){
+    
+    $('.submit-btn').on('click', addNewCard());
+                        
+    
+}
+
+
+function addNewCard() {
+    
+    console.log("addNewCard");
+    var word = document.getElementById('wordInput').value;
+    var define = document.getElementById('defInput').value;
     
     
     
-    if(word.length == 0){
+    /*if(word.length == 0 ){
         alert("Can't submit a blank card");
         return;
     }
@@ -13,18 +23,11 @@ function addNewCard(){
         return;
     }
     else
+    */
         /*Make a flash card*/
-        $('col-md-6').append("<div class='card'><div class ='front'><span>"+word+"</span></div></div>")
-        $('col-md-6').append("<div class='card'><div class ='back'><span>"+define+"</span></div></div>")
+        $('.card-inner').append("<div class ='card-front'><span>"+word+"</span></div></div>")
+        $('.card-inner').append("<div class ='card-back'><span>"+define+"</span></div></div>")
 
-}
-
-
-function main(){
-    
-    $('.submit-btn').on('click', function(){ addNewCard(); $('#add')[0].reset();})
-                        
-    
 }
 
 $(document).ready(main);
