@@ -1,7 +1,7 @@
 .card{
     perspective: 10000px;
-    width 10rem;
-    height: 10rem;
+    width 30rem;
+    height: 20rem;
     border-radius: 5px solid #f1f1f1;
     margin: 20px;
     background-color: transparent;
@@ -61,7 +61,7 @@ input {
     padding:10px;
 }
 
-input[type=text],input[type=number] {
+input[type=text] {
     border:3px solid #699aaf;
     -webkit transition:0.5s;
     transition:0.5s;
@@ -78,4 +78,5 @@ deck{
 .dtTitle {
     font-size: 24px;
 }
+
 
