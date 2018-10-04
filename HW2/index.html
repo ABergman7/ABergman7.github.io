@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html lang= "en">
+<head>
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Homework2</title>
+    
+    <!--------------------------------bootstrap------------------------------------>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel ="stylesheet" href="../css/bootstrap.min.css">
+    <!------------------- CSS ----------------------------------------->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+        
+    
+    </head>
+    
+    <body>
+            <div class="container-fluid">
+             <div class="header">
+                <h1>Study Buddy</h1>
+                </div>
+            </div>
+        <div class="container-fluid">
+            <p> This is a flash card website to help you study!</p>
+        
+        
+        </div>
+        
+        <div class="row">
+            <div class="add-form">
+                <form>
+                <!--Form to add a word---->
+                <h3>Word: </h3>
+                <input type="text" name="word" id="wordInput"> <br/>                 <h3> Definition: </h3>
+                    <input type="text" name="definition" id="defInput" style="width: 500px; height: 200px"><br/>
+                    <button onclick="addNewCard(); return false;" type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                
+            </div> 
+           
+            <div class="container">
+                <h2>Previous Cards:</h2>
+            <div class="deck" id="deckIn">   
+            </div>
+                </div>
+            
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-inner" id="CardIn"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+         <script src="/js/bootstrap.bundle.min.js"></script>
+        <script src="main.js"></script>
+       
+       
+    
+        
+    </body>
+</html>
