@@ -10,10 +10,14 @@ layout: default
 
 For this homework we are tasked to use our knowledge from HTML, CSS, and Git and apply our recent knowledge of Javascript and JQuery to make a unique website that takes in input from a user and provides an output. The creativity of our website is in our hands...
 
+1. [Assignment](http://www.wou.edu/~morses/classes/cs46x/assignments/HW2.html)
+2. [Repository](https://github.com/ABergman7/ABergman7.github.io/tree/master/HW2)
+3. [Demo](/index.html)
+
 ## First Step: Planning
 Here is a rough sketch of the site that I wanted:
 
-![Picture](Idea_Pictures/IMG_0338.HEIC)
+![Picture](Idea_Pictures/IMG_0338.jpg)
 
 I wanted a small simple sight that made a flash card for a student to make to help study.
 
