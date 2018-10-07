@@ -203,7 +203,7 @@ function addNewCard() {
 ```
 
 Now since everything is all done, it's time to merge the HW2 branch back into master
-
+git 
 ```bash
 git add .
 git commit -m "Site is up and running not designed well though"
