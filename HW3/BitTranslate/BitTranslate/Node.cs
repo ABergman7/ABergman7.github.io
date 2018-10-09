@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+/// <summary>
+/// A single linked node class.
+/// </summary>
+/// <typeparam name="T"></typeparam>
+namespace Node
 {
-    /// <summary>
-    /// A single linked node class.
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class Node<T> 
+    public class Node<T>
     {
         public T data;
         public Node<T> next;
@@ -21,4 +21,5 @@ namespace ConsoleApp1
             this.next = next;
         }
     }
+
 }
