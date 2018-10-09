@@ -21,6 +21,6 @@ All my code can be found in my personal [Repository](https://github.com/ABergman
 
 2.[Homework 2](HW2/h2index.md): Javascript, JQuery.
 
-3.[Homework 3](HW3/index.md): C#
+3.[Homework 3](HW3/Index.md): C#
 
 
