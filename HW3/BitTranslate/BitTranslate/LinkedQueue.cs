@@ -5,11 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// 
+/// </summary>
+/// <typeparam name="T"></typeparam>
 public class LinkedQueue<T> : IQueueInterface<T>
 {
     private Node<T> front;
     private Node<T> rear;
 
+    /// <summary>
+    /// 
+    /// </summary>
 	public LinkedQueue()
 	{
         front = null;
@@ -17,6 +24,11 @@ public class LinkedQueue<T> : IQueueInterface<T>
 
 	}
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="element"></param>
+    /// <returns></returns>
     public T Push(T element)
     {
         if (element == null)
@@ -36,6 +48,10 @@ public class LinkedQueue<T> : IQueueInterface<T>
         }
         return element;
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     public T Pop()
     {
         T tmp = default(T);
@@ -58,6 +74,10 @@ public class LinkedQueue<T> : IQueueInterface<T>
         }
             return tmp;
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
         public bool IsEmpty()
         {
             if(front == null && rear == null)

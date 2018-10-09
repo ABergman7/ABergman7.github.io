@@ -57,14 +57,14 @@ public class TestClass
         if(args.Length < 1)
         {
             Console.WriteLine("Please invoke with the max value to print binary up to, like this:");
-            Console.WriteLine("\t./Main 12");
+            Console.WriteLine("\t./ BitTranslate.exe 12");
             return;
         }
         try
         {
-            n = Int32.Parse(args[0]);
+            n = int.Parse(args[0]);
         }
-        catch (FormatException e)
+        catch (FormatException)
         {
             Console.WriteLine("I'm sorry, I can't understand the number: " + args[0]);
             return;
