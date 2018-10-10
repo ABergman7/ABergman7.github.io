@@ -14,6 +14,16 @@ For this homework we are tasked with downloading and setting up Visual Studios C
 1. [Assignment](http://www.wou.edu/~morses/classes/cs46x/assignments/HW3_1819.html)
 2. [Repo](https://github.com/ABergman7/ABergman7.github.io/tree/master/HW3)
 
+## Branching
+Just like homework 2, for this homework ( and for the rest) we were tasked with creating another feature branch.
+```bash
+git branch HW3
+git checkout master
+git add .
+git commit -m "setting up merge for hw3"
+git push origin master
+```
+
 
 ## Installing Visual Studios
 
