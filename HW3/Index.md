@@ -1,12 +1,86 @@
 ---
-title: Homework 2
+title: Homework 3
 layout: default
 ---
 
 # Software Engineering Homework
 
 
-## Homework 2
+## Homework 3
 
 
-For this homework we are tasked with translating a Java file that does a bit wise translation of a number, and print the previous bits of t
+For this homework we are tasked with downloading and setting up Visual Studios Community edition, followed with translating a Java program to C#. This particular program does a binary translation of a given integer n, and print the value in binary as well as the binary values of previous integers before n. The inportance of this this project was to learn C# and it's similarities, but also it differences, from Java.
+
+1. [Assignment](http://www.wou.edu/~morses/classes/cs46x/assignments/HW3_1819.html)
+
+
+## Installing Visual Studios
+
+I took the liberty of not only installing the .NET desktop development workload but as well as some of the other workloads that I think I will need for web development later on. For example, the Node.js development.
+
+## The Java Program
+
+ I used the Eclipse IDE that I already had for Java programming from previous classes. I ran the program, however, from the command line since I am a bit more comfortable with compiling and running programs from there. Here is an example of the Java code executing: 
+ 
+ ![Picture](Pictures/JavaExe.PNG)
+ 
+ ## .gitignore
+ 
+ Since there are quite a bit of things popping while working with visual studios, we were tasked with making a .gitignore. That way we could see the actual code that we were working during our commits, rather than all of the adjustments and compilations from visual studios.
+ 
+ ## Translating
+ 
+ It's important to note that before I started I went and took a look at the [Naming Guidlines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines) and the [Code Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions) prior to translating. 
+ 
+ After reviewing the code I began to hammer out the Node class. Below is the java code and the translation to C#.
+ 
+ Java:
+ 
+ ```java
+    /** Singly linked node class. */
+
+    public class Node<T>
+    {
+	   public T data;
+	   public Node<T> next;
+	
+	   public Node( T data, Node<T> next )
+	   {
+		  this.data = data;
+		  this.next = next;
+	   }
+    }
+
+```
+C#
+```C#
+    /// <summary>
+    /// The class for the Node
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class Node<T>
+    {
+        public T data;
+        public Node<T> next;
+
+        /// <summary>
+        /// Setting up the Node with the inputs
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="next"></param>
+        public Node(T data, Node<T> next)
+        {
+            this.data = data;
+            this.next = next;
+        }
+    }
+
+
+
+```
+
+
+
+ 
+ 
+ 
