@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 /// <summary>
-/// The class that handles
+/// The class that handles underflow for the queue
 /// </summary>
 public class QueueUnderflowException : Exception
 {

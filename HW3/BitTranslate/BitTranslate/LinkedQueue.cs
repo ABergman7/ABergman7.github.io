@@ -6,16 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// 
+/// Class for making the Queue
 /// </summary>
-/// <typeparam name="T"></typeparam>
+/// <typeparam name="T">Generic</typeparam>
 public class LinkedQueue<T> : IQueueInterface<T>
 {
     private Node<T> front;
     private Node<T> rear;
 
     /// <summary>
-    /// 
+    /// Set up the Queue
     /// </summary>
 	public LinkedQueue()
 	{
@@ -25,10 +25,10 @@ public class LinkedQueue<T> : IQueueInterface<T>
 	}
 
     /// <summary>
-    /// 
+    /// Push an element onto the Queue
     /// </summary>
     /// <param name="element"></param>
-    /// <returns></returns>
+    /// <returns>element</returns>
     public T Push(T element)
     {
         if (element == null)
@@ -49,9 +49,9 @@ public class LinkedQueue<T> : IQueueInterface<T>
         return element;
     }
     /// <summary>
-    /// 
+    /// Pop an element from the Queue
     /// </summary>
-    /// <returns></returns>
+    /// <returns>tmp</returns>
     public T Pop()
     {
         T tmp = default(T);
@@ -75,9 +75,9 @@ public class LinkedQueue<T> : IQueueInterface<T>
             return tmp;
     }
     /// <summary>
-    /// 
+    /// Checks to see if the queue was empty
     /// </summary>
-    /// <returns></returns>
+    /// <returns>boolean</returns>
         public bool IsEmpty()
         {
             if(front == null && rear == null)

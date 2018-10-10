@@ -79,7 +79,7 @@ I took the liberty of not only installing the .NET desktop development workload 
 Not too much of a difference here, and as a person coming from a Java background it was bit relieving. What is nice to note here is the XML is incredibly handy and easy to use for documentaiton all it takes to generate is the typing /// for a short cut!
 
 
-Well enough of the similarities lets look at the differences! I specific class that I want to talk about is the LinkedQueue class, and to save space lets look at the push() method.
+Well enough of the similarities lets look at the differences! 1 specific class that I want to talk about is the LinkedQueue class, and to save space lets look at the push() method.
 
 ### Java
 
@@ -129,11 +129,72 @@ Well enough of the similarities lets look at the differences! I specific class t
         return element;
     }
  ```
-Let's start with the the name of the method. In C#'s naming conventions we have, it is important for programmers to name their methods,  Classes, Interface's with captal letters. As stated from our naming conventions guide it states "This distinguishes type names from methods"
+ Let's start with the the name of the method. In C#'s naming conventions we have, it is important for programmers to name their methods,  Classes, Interface's with captal letters. As stated from our naming conventions guide it states "This distinguishes type names from methods"
+
+Now let's take a look at the exceptions, Java and C# have differently used Exceptions in this case Java is throwing a NullPointerException, whereas C# is throwing a NullReferenceException.
     
+Since we are talking about exceptions, lets take a look at the custum exception classes: 
+### Java
+```java
+public class QueueUnderflowException extends RuntimeException
+{
+  public QueueUnderflowException()
+  {
+    super();
+  }
 
+  public QueueUnderflowException(String message)
+  {
+    super(message);
+  }
+}
+```
+### C#
+```csharp
+/// <summary>
+/// The class that handles underflow for the queue
+/// </summary>
+public class QueueUnderflowException : Exception
+{
+    public  QueueUnderflowException(string message) : base(message) { }
 
+}
+```
 
+As you can tell, the Java class looks way more tedious to write up than the C# class! With C# instead of writing "extends" you get to simply use the : operator. Which does a broad spectrum of nifty things. In this case the : operator is used twice, but for different reasons. In the class name it is used to extend the Exception class, whereas the second time it is being used as a "goto" label.
+
+To knock out two birds with one stone I want to take a look at the for-each loop in Main.java and TestClass.cs, and focus on the syntax and of the different loops, as well as printing. 
+
+### Java
+```java
+for(String s : output)
+        {
+            for(int i = 0; i < maxLength - s.length(); ++i)
+            {
+                System.out.print(" ");
+            }
+            System.out.println(s);
+        }
+```
+### C#
+```csharp
+foreach(string s in output)
+        {
+            for(int i = 0; i < maxLength - s.Length; ++i)
+            {
+                Console.Write(" ");
+            }
+            Console.WriteLine(s);
+        }
+```
+
+Looking at the above code, the first thing i noticed was jsut how amazingly readable the "for-each" loop in C# was. It's definitly clearer than Java's. Stepping inside, the for loop almost looks completly identical. There is, however, a difference in using the .length() method for the string. In order for c# to manipulate any kind of comparison the method doesn't use the () at the end. 
+
+Finally, of course the print and printline for C# is only Console.Write() and Console.WriteLine()
+
+## Closing Thoughts
+
+I had an amazing time learning C#. It helps that I came from a Java background since the two share so many simularities. My favorite thing about C# is the readability, I find easier step through than any other language that I have coded so far. (Except SQL :)).
  
  
  
