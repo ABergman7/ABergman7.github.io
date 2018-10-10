@@ -74,6 +74,7 @@ I took the liberty of not only installing the .NET desktop development workload 
             this.next = next;
         }
     }
+    
 ```
 Not too much of a difference here, and as a person coming from a Java background it was bit relieving. What is nice to note here is the XML is incredibly handy and easy to use for documentaiton all it takes to generate is the typing /// for a short cut!
 
@@ -82,7 +83,7 @@ Well enough of the similarities lets look at the differences! I specific class t
 
 ### Java
 
-    ```java
+```java
     public T push(T element)
 	   { 
 		  if( element == null )
@@ -104,11 +105,10 @@ Well enough of the similarities lets look at the differences! I specific class t
           }
         return element;
 	}
-
-    ```
+```
 ### C#
 
-    ```csharp
+```csharp
     public T Push(T element)
     {
         if (element == null)
@@ -128,7 +128,7 @@ Well enough of the similarities lets look at the differences! I specific class t
         }
         return element;
     }
-    ```
+ ```
 Let's start with the the name of the method. In C#'s naming conventions we have, it is important for programmers to name their methods,  Classes, Interface's with captal letters. As stated from our naming conventions guide it states "This distinguishes type names from methods"
     
 
