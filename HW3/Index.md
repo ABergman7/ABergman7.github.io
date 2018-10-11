@@ -216,7 +216,7 @@ Looking at the above code, the first thing I noticed was how amazingly readable 
 
 ## Closing Thoughts
 
-I had an amazing time learning C#. It helps that I came from a Java background since the two share so many simularities. My favorite thing about C# is the readability, I find easier step through than any other language that I have coded so far. (Except SQL :)).
+I had an amazing time learning C#. It helps that I came from a Java background since the two share so many simularities. My favorite thing about C# is the readability, I find it easier to step through than any other language that I have coded so far. (Except SQL :)).
  
  
  
