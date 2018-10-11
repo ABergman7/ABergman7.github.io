@@ -5,8 +5,11 @@ layout: default
 
 # Software Engineering Homework
 
+[Home](ABergman7.github.io/index.md)
+
 
 ## Homework 3
+
 
 
 For this homework we are tasked with downloading and setting up Visual Studios Community edition, followed with translating a Java program to C#. This particular program does a binary translation of a given integer n, and print the value in binary as well as the binary values of previous integers before n. The importance of this this project was to learn C# and it's similarities, but also it differences, with Java.
