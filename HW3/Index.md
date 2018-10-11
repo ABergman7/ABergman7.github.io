@@ -4,10 +4,6 @@ layout: default
 ---
 
 # Software Engineering Homework
-
-[Home](ABergman7.github.io/index.md)
-
-
 ## Homework 3
 
 
