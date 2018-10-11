@@ -205,9 +205,14 @@ foreach(string s in output)
         }
 ```
 
-Looking at the above code, the first thing I noticed was how amazingly readable the "for-each" loop in C# was compared to Java's. Stepping inside, the for loop almost looks completly identical. There is, however, a difference in using the .length() method for the string. In order for c# to manipulate any kind of comparison the method doesn't use the () at the end. 
+Looking at the above code, the first thing I noticed was how amazingly readable the "for-each" loop in C# was compared to Java's. Stepping inside, the for loop almost looks completly identical. There is, however, a difference in using the .length() method for the string. In order for c# to manipulate any kind of comparison the method doesn't use the () at the end. Also, for printing output C# uses Console.Write() and Console.WriteLine().
 
-Finally, for printing output, C# uses Console.Write() and Console.WriteLine()
+
+## Final Output
+
+![Picture](Pictures/CSharpExe.PNG)
+
+
 
 ## Closing Thoughts
 
