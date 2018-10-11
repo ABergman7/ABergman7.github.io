@@ -8,20 +8,21 @@ using System.Threading.Tasks;
 
 public class TestClass
 {
-    /**
-    * Print the binary representation of all numbers from 1 up to n.
-    * This is accomplished by using a FIFO queue to perform a level 
-    * order (i.e. BFS) traversal of a virtual binary tree that 
-    * looks like this:
-    *                 1
-    *             /       \
-    *            10       11
-    *           /  \     /  \
-    *         100  101  110  111
-    *          etc.
-    * and then storing each "value" in a list as it is "visited".
-    */
-    static LinkedList<string>  GenerateBinaryRepresentationList(int n)
+    /// <summary>
+    /// Print the binary representation of all numbers from 1 up to n.
+    /// This is accomplished by using a FIFO queue to perform a level
+    /// order(i.e.BFS) traversal of a virtual binary tree that
+    /// looks like this:
+    ///                 1
+    ///             /       \
+    ///            10       11
+    ///           /  \     /  \
+    ///         100  101  110  111  etc.
+    ///and then storing each "value" in a list as it is "visited".
+    /// </summary>
+    /// <param name="n">int</param>
+    /// <returns>output</returns>
+static LinkedList<string>  GenerateBinaryRepresentationList(int n)
     {
        LinkedQueue<StringBuilder> q = new LinkedQueue<StringBuilder>();
 
@@ -53,6 +54,10 @@ public class TestClass
         return output;
 
     }
+    /// <summary>
+    /// Main Method
+    /// </summary>
+    /// <param name="args"></param>
     static void Main(String[] args)
     {
         int n = 10;
