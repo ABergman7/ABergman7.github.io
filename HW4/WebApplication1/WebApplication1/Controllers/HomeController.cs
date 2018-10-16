@@ -13,18 +13,19 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult MileToMetric()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Convert a mile to the following metric measurements: ";
 
             return View();
         }
 
-        public ActionResult Contact()
+       /* public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
+        */
     }
 }
