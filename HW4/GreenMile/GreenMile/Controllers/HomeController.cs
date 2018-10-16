@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebApplication1.Controllers
+namespace GreenMile.Controllers
 {
     public class HomeController : Controller
     {
@@ -13,19 +13,18 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public ActionResult MileToMetric()
+        public ActionResult About()
         {
-            ViewBag.Message = "Convert a mile to the following metric measurements: ";
+            ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-       /* public ActionResult Contact()
+        public ActionResult Converter()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Convert Miles to the following metrics: ";
 
             return View();
         }
-        */
     }
 }
