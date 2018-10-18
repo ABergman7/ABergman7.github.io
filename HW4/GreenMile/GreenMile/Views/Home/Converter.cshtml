@@ -1,9 +1,39 @@
 ﻿<!DOCTYPE html>
 
 @{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Converter";
 }
 
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
+<div class="row">
+    <div class="add-form">
+        <form action="/Home/Converter" method="get">
+            <!--Form to add miles---->
+            <h3>Miles</h3>
+            <input type="number" step=".0001" name="mile" id="mileIn"> <br />
+
+                    <div class="radio">
+                        <label><input type="radio" name="measure" value="Millimeter" checked>Millimeter</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="measure" value="Centimeter">Centimeter</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="measure" value="Meter">Meter</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="measure" value="Kilometer">Kilometer</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+        
+        </form>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p>@ViewBag.Answer</p>
+            </div>
+
+        </div>
+    </div>
