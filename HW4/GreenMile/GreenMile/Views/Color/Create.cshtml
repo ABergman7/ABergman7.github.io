@@ -6,7 +6,7 @@
 <h2>Color Converter</h2>
 
 
-    @using (Html.BeginForm("Color", "Create", FormMethod.Post))
+    @using (Html.BeginForm("Create", "Color", FormMethod.Post))
     {
         @Html.Label("First Color", "First Color")
         @Html.TextBox("First Color", "", new { @class = "form-control", @placeholder = "#ffffff", type = "string" })
