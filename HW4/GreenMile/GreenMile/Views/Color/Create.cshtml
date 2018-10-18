@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Color Converter</h2>
+
+
+    @using (Html.BeginForm("Color", "Create", FormMethod.Post))
+    {
+        @Html.Label("First Color", "First Color")
+        @Html.TextBox("First Color", "", new { @class = "form-control", @placeholder = "#ffffff", type = "string" })
+
+        @Html.Label("Second Color", "Second Color")
+        @Html.TextBox("Second Color", "", htmlAttributes: new { @class = "form-control", @placeholder = "#ffffff", type = "string" })
+    }
+
+
