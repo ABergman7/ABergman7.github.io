@@ -8,7 +8,7 @@
 @using (Html.BeginForm("Create", "Color", FormMethod.Post))
 {
     @Html.Label("FirstColor", "FirstColor")
-    <p>Please use ARGB hex values like: #ABABABAB</p>
+    <p>Please use ARGB hex values like: #ABABABAB Note: Hex values are in order as: RGBA, i.e, the first two digits are red.</p>
     @Html.TextBox("ColorOne", "",  new { @class = "form-control", @placeholder = "#FFFFFFFF", @type = "string", @pattern="#[0-9A-Z]{8}"})
 
     @Html.Label("SecondColor", "SecondColor")

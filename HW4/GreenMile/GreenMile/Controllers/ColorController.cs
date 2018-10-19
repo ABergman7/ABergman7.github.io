@@ -13,14 +13,19 @@ namespace GreenMile.Controllers
     {
 
 
-        // POST: Color
+        // GET: Color
         [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
 
-
+        /// <summary>
+        /// After POST take color strings from form and convert to color for addition
+        /// </summary>
+        /// <param name="ColorOne"></param>
+        /// <param name="ColorTwo"></param>
+        /// <returns>View with new color plus first and second color</returns>
         [HttpPost]
         public ActionResult Create(string ColorOne, string ColorTwo)
         {
@@ -30,14 +35,8 @@ namespace GreenMile.Controllers
                 colorOne = (Color)ColorConverter.ConvertFromString(ColorOne);
                 colorTwo = (Color)ColorConverter.ConvertFromString(ColorTwo);
             
-           
-
-            
             Debug.WriteLine(colorOne);
             Debug.WriteLine(colorTwo);
-
-
-
             Color newColor = Color.Add(colorOne,colorTwo);
 
 
