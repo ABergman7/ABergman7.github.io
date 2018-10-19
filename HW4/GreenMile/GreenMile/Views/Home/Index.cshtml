@@ -4,16 +4,25 @@
 
 <div class="jumbotron">
     <h1>Homework 4</h1>
-   
+
 </div>
 
 <div class="row">
     <div class="col-md-4">
         <h2>Converter</h2>
         <p>
-           Here is a mile to metric conversion page:
+            Here is a mile to metric conversion page:
         </p>
-        <p><a class="btn btn-default" @Html.ActionLink("Converter","Converter","Home") </a></p>
+        <p><a class="btn btn-default" @Html.ActionLink("Converter", "Converter", "Home")</a></p>
     </div>
-    
-   </div>
+    <div class="col-md-4">
+        <h2>Color</h2>
+
+        <p>
+            Here is the color mixer page:
+        </p>
+
+        <p><a class="btn btn-default" @Html.ActionLink("Color", "Create", "Color")</a></p>
+
+    </div>
+</div>
