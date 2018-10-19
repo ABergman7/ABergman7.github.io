@@ -8,13 +8,33 @@
 @using (Html.BeginForm("Create", "Color", FormMethod.Post))
 {
     @Html.Label("FirstColor", "FirstColor")
-    @Html.TextBox("ColorOne", "", htmlAttributes:new { @class = "form-control", @placeholder = "#FFFFFFFF", type = "string" })
+    <p>Please use ARGB hex values like: #ABABABAB</p>
+    @Html.TextBox("ColorOne", "",  new { @class = "form-control", @placeholder = "#FFFFFFFF", @type = "string", @pattern="#[0-9A-Z]{8}"})
 
     @Html.Label("SecondColor", "SecondColor")
-    @Html.TextBox("ColorTwo", "", htmlAttributes: new { @class = "form-control", @placeholder = "#FFFFFFFF", type = "string" })
-    
+    @Html.TextBox("ColorTwo", "", new { @class = "form-control", @placeholder = "#FFFFFFFF", @type = "string", @pattern ="#[0-9A-Z]{8}"})
+
     <button type="submit" class="btn btn-default">Submit</button>
 }
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="rect" style="background-color:@ViewBag.ColorA;"></div>
+    </div>
+</div>
+<p>+</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="rect" style="background-color:@ViewBag.ColorB;"></div>
+    </div>
+</div>
+<p>=</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="rect" style="background-color:@ViewBag.Newcolor;"></div>
+    </div>
+</div>
+
 
 @ViewBag.NewColor
 
