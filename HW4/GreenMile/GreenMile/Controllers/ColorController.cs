@@ -12,7 +12,10 @@ namespace GreenMile.Controllers
     public class ColorController : Controller
     {
 
-
+        /// <summary>
+        /// The HTTP Get ActionResult for the Create page
+        /// </summary>
+        /// <returns>view for Create.cshtml</returns>
         // GET: Color
         [HttpGet]
         public ActionResult Create()
@@ -29,19 +32,19 @@ namespace GreenMile.Controllers
         [HttpPost]
         public ActionResult Create(string ColorOne, string ColorTwo)
         {
-            Color colorOne;
-            Color colorTwo;
-            
-                colorOne = (Color)ColorConverter.ConvertFromString(ColorOne);
-                colorTwo = (Color)ColorConverter.ConvertFromString(ColorTwo);
-            
+            Color colorOne = (Color)ColorConverter.ConvertFromString(ColorOne);
+            Color colorTwo = (Color)ColorConverter.ConvertFromString(ColorTwo);
+
             Debug.WriteLine(colorOne);
             Debug.WriteLine(colorTwo);
+
+            //Add the two colors
             Color newColor = Color.Add(colorOne,colorTwo);
 
 
             Debug.WriteLine(newColor);
 
+            //Return all three colors in their own ViewBag
             ViewBag.NewColor = newColor;
             ViewBag.ColorA = colorOne;
             ViewBag.ColorB = colorTwo;
