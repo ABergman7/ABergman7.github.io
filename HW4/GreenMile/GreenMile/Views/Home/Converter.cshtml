@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 
 @{
-    ViewBag.Title = "Converter";
+    ViewBag.Title = "Mile to Metric Converter";
 }
 
 <h2>@ViewBag.Title.</h2>
@@ -12,7 +12,7 @@
         <form action="/Home/Converter" method="get">
             <!--Form to add miles---->
             <h3>Miles</h3>
-            <input type="number" step=".0001" name="mile" id="mileIn"> <br />
+            <input type="number" step=".0001" name="mile" id="mileIn" pattern="[1-9]{}"> <br />
 
                     <div class="radio">
                         <label><input type="radio" name="measure" value="Millimeter" checked>Millimeter</label>
