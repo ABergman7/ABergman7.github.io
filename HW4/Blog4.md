@@ -10,9 +10,9 @@ layout: default
 
 For this Homework assignment we were tasked with creating a MVC 5 application with two features. One being a mile metric converter, the other being a Color mixer. We were also tasked with branching the two features and then merging them in order to practice handling merge conflicts. 
 
-1. [Assignment](http://www.wou.edu/~morses/classes/cs46x/assignments/HW3_1819.html)
-2. [Repo](https://github.com/ABergman7/ABergman7.github.io/tree/master/HW3)
-
+1. [Assignment](http://www.wou.edu/~morses/classes/cs46x/assignments/HW4_1819.html)
+2. [Repo](https://github.com/ABergman7/ABergman7.github.io/tree/master/HW4)
+3. [Video](https://youtu.be/9FEFEyd3XP8)
 
 ## Branching
 For this home work we were tasked with making two branches. One for the mile converter, and one for the Color mixer. Before I branched the two features I made a initial branch that created the homework foulder and the MVC files that I needed the for the project, and then merged that branch back into master Here is a visual of what that looks like:
@@ -147,6 +147,6 @@ For the color mixer we had to create a different controller and different view. 
 ```
 the Sytem.Windows.Media reference uses the Add method which is a nifty method. Instead having to type multiple if statements to check to see if a specific rgb value was greater than 255 the Add method does the check for us. So after the conversion the new color could then be added to a ViewBag
 
-## Putting it all together
 
-![Video](https://youtu.be/9FEFEyd3XP8)
+
+
