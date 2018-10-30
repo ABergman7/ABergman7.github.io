@@ -129,7 +129,7 @@ namespace CampusApartments.DAL
 
 One thing that I regretted, but I learned from my mistake, was naming the server TenantDB when it was not a DB. Later on I will stick with nameing my servers differently to prevent any confusion.
 
-##Views 
+## Views 
 
 To scaffold a view from the model and the DAL was really nifty. However, the almost gave a bit too much than what I needed, and didn't allow for the Issue text box to be any bigger. So I gutted the excess .cshtml files like edit, details. I did leave delete since, from my perspective, the resident assistance was using the data from the database like a queue, so I wanted them to be able to "pop" from the queue. One thing that is really important to talk about here is the views are STRONGLY TYPED. This allowed us to treate the views like functionally programmed file, and since we are passing information back and forth to the model the strongly typed views allow very little room for failure. This also allowed us use Lambda functions, for example here is a display from the Index.cshtml file of Tenants: 
 
@@ -168,6 +168,6 @@ To scaffold a view from the model and the DAL was really nifty. However, the alm
 ```
 With Razor syntax, we were able to assign a lambda function, in this case modelItem, to display the data currently in the items in the Tenant model. It's also nice to use lambda functions to create what we wanted on one line. Had we handled this view with an object-Oriented perspective the amount of functions to write for each item would be pain-staking. 
 
-##Closing Thought
+## Closing Thought
 
 I enjoyed this lab, simply because I have always had the perspective of a DBA. The perspective shift from a DBA to a full stack developer was almost a 180 degree change for me. I have always handled things from a data first perspective, so the code first perspective was a big time eye-opener. 
