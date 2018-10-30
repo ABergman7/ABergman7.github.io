@@ -47,7 +47,7 @@ namespace CampusApartments.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,DateReq,PhoneNum,Reason,Permission")] Tenant tenant)
+        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,UnitNumber,AptName,Reason,PhonNum,Permission,DateReq")] Tenant tenant)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace CampusApartments.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,DateReq,PhoneNum,Reason,Permission")] Tenant tenant)
+        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,UnitNumber,AptName,Reason,PhonNum,Permission,DateReq")] Tenant tenant)
         {
             if (ModelState.IsValid)
             {

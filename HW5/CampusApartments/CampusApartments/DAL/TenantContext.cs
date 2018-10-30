@@ -10,8 +10,7 @@ namespace CampusApartments.DAL
 {
     public class TenantContext : DbContext 
     {
-        // GET: TenantContext
-        public TenantContext() : base("name=Tenant")
+        public TenantContext() : base("name=TenantDB")
         {
           
         }
