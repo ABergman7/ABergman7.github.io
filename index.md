@@ -23,8 +23,10 @@ All my code can be found in my personal [Repository](https://github.com/ABergman
 
 3.[Homework 3](HW3/Index.md): C#
 
-4.[Homework 4](HW4/Blog4.md): MVC 1
+4.[Homework 4](HW4/Blog4.md): MVC 5 Application
 
-5.[Homework 5](HW5/Blog5.md):MVC with simple database
+5.[Homework 5](HW5/Blog5.md): MVC Application with simple database
+
+6.[Homework 6](HW6/hw6blog.md) : MVC Application with relational Database
 
 
