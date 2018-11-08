@@ -12,8 +12,8 @@ For this Homework assignment we were tasked with creating a MVC 5 web applicatio
 
 1. [Assignment](http://www.wou.edu/~morses/classes/cs46x/assignments/HW5_1819.html)
 2. [Repo](https://github.com/ABergman7/ABergman7.github.io/tree/master/HW5)
+3. [Video](https://www.youtube.com/watch?v=EWqsBhqKzus)
 
- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=EWqsBhqKzus" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 ## Database and model 
 
