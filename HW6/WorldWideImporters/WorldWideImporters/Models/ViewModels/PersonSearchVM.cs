@@ -10,9 +10,12 @@ using System.Data.Entity.Spatial;
 
 namespace WorldWideImporters.Models.ViewModels
 {
+    /// <summary>
+    /// Makes an overall viewmodel for all of the data that I will need
+    /// </summary>
     public class PersonSearchVM
     {
-        // From People
+        // Data needed from Person.cs
         public string Name { get; set; }
         public string Alias { get; set; }
         public string PhoneNumber { get; set; }

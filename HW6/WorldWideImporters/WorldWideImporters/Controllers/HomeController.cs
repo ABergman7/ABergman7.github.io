@@ -16,12 +16,20 @@ namespace WorldWideImporters.Controllers
     {
         private WWIContext db = new WWIContext();
 
-
+        /// <summary>
+        /// Base Index page
+        /// </summary>
+        /// <returns>View</returns>
         public ActionResult Index()
         {
             return View();
         }
 
+        /// <summary>
+        /// Reads input from search bar then generates names
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>View(model></returns>
         [HttpPost]
         public ActionResult Index(PersonDashboardVM model)
         {
@@ -42,7 +50,11 @@ namespace WorldWideImporters.Controllers
         }
 
 
-        // GET: PersonDashboardVMs/Details/5
+        /// <summary>
+        /// Generatesa detail page about a person
+        /// </summary>
+        /// <param name="result"></param>
+        /// <returns>View(customers)</returns>
         [HttpGet]
         public ActionResult Details(string result)
 
@@ -76,6 +88,8 @@ namespace WorldWideImporters.Controllers
             }
             else
             {
+                // Query to get itemdetails starting from dbo.People
+                // traverse relations to pull out selected information
                 var ItemDetails = db.People
                     .Where(p => p.FullName.Contains(result)).Include("PrimaryContactPersonID")
                     .SelectMany(x => x.Customers2).Include("CustomerID")
@@ -85,7 +99,7 @@ namespace WorldWideImporters.Controllers
                     .OrderByDescending(x => x.LineProfit).Take(10)
                     .ToList();
 
-
+                //Query for getting sales person information
                 var SalesRepDetails = db.People
                     .Where(p => p.FullName.Contains(result)).Include("PrimaryContactPersonID")
                     .SelectMany(x => x.Customers2).Include("CustomerID")
@@ -97,9 +111,9 @@ namespace WorldWideImporters.Controllers
                     .Select(x => x.Invoice).Include("SalespersonID")
                     .Select(x => x.Person4).ToList();
 
-
+                //Create Items list
                 List<ItemSearchVM> Items = new List<ItemSearchVM>();
-
+                //add to Items list
                 for(int i = 0; i < 10; i++)
                     
                 {
@@ -145,6 +159,7 @@ namespace WorldWideImporters.Controllers
                             .SelectMany(x => x.Invoices).Include("InvoiceID")
                             .SelectMany(x => x.InvoiceLines).Sum(x => x.ExtendedPrice),
 
+                        //Gross profit
                         Profits = db.People
                             .Where(p => p.FullName.Contains(result)).Include("PrimaryContactPersonID")
                             .SelectMany(x => x.Customers2).Include("CustomerID")

@@ -5,6 +5,9 @@ using System.Web;
 
 namespace WorldWideImporters.Models.ViewModels
 {
+    /// <summary>
+    /// Item info that will added up into PersonSearch
+    /// </summary>
     public class ItemSearchVM
 
     {

@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+   /* padding-top: 50px;*/
     padding-bottom: 20px;
 }
 
@@ -23,13 +23,23 @@ textarea {
     max-width: 100%;
 }
 
-.backgroudpic {
-    background-image: url('/Images/Logo.png'); 
-    background-size:300px;
-    background-repeat: no-repeat;
-    min-height: 300px;
-}
-
 .searchbar{
     position: relative;
 }
+.button{
+    position:absolute;
+    bottom: 0%;
+    right: 0%;
+}
+.content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: #5d616d;
+    border-radius: 10px;
+    margin: 20px;
+    opacity: .91;
+    color: white;
+}
+

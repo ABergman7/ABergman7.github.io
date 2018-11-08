@@ -1,5 +1,139 @@
-﻿@model IEnumerable<WorldWideImporters.Models.ViewModels.PersonDashboardVM>
+﻿@model IEnumerable<WorldWideImporters.Models.ViewModels.PersonSearchVM>
 
-@{ 
+@{
     ViewBag.Title = "Details";
 }
+
+
+@* Current place holder for the image. Right at the top of the profile*@
+<img src="@Url.Content("~/Images/noImage.png")" alt="No Image" style="width: 150px; height: 150px;" />
+
+
+@*Generate Information about the Person*@
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default text-center">
+            <div class="panel-heading">
+                <h3 class="panel-title">Details For @Model.FirstOrDefault().Name</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <h4>Full Name</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().Name</div>
+                </div>
+                <div class="row">
+                    <h4>Preferred Name</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().Alias</div>
+                </div>
+                <div class="row">
+                    <h4>Phone number</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().PhoneNumber</div>
+                </div>
+                <div class="row">
+                    <h4>Fax Number</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().FaxNum</div>
+                </div>
+                <div class="row">
+                    <h4>Member Since</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().ValidFrom</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*Generate informationa about the company a person is associated with*@
+    <div class="col-md-6">
+        <div class="panel panel-default text-center">
+            <div class="panel-heading">
+                <h3 class="panel-title">Company Information</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <h4>Phone Name</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().CompPhoneNumber</div>
+                </div>
+                <div class="row">
+                    <h4>Company Fax</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().CompFaxNumber</div>
+                </div>
+                <div class="row">
+                    <h4>Phone number</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().PhoneNumber</div>
+                </div>
+                <div class="row">
+                    <h4>Fax Number</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().FaxNum</div>
+                </div>
+                <div class="row">
+                    <h4>Website</h4>
+                    <div class="cold-md-4"><a href="@Model.FirstOrDefault().Website">@Model.FirstOrDefault().Website</a></div>
+                </div>
+                <div class="row">
+                    <h4>Customer Since</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().CompValidFrom</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    @*Purchase history of Person*@
+    <div class="col-md-8">
+        <div class="panel panel-default text-center">
+            <div class="panel-heading">
+                <h3 class="panel-title">Purchase History Information</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <h4>Total Orders</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().Orders</div>
+                </div>
+                <div class="row">
+                    <h4>Gross Sales</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().Sales</div>
+                </div>
+                <div class="row">
+                    <h4>Gross Profit</h4>
+                    <div class="cold-md-4">@Model.FirstOrDefault().Profits</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Table for top items purchased*@
+<div class="container container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class=" clearfix">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Item Summary</h3>
+                    </div>
+                    @*Table for the top 10 sales*@
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>StockItemID</th>
+                                <th>Description</th>
+                                <th>Line Profit</th>
+                                <th>Sales Person</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.FirstOrDefault().Items)
+                            {
+                                <tr>
+                                    <td>@item.StockItemID</td>
+                                    <td>@item.ItemDescription</td>
+                                    <td>@{string LineProfit = string.Format("{0:C2}", item.LineProfit);} @LineProfit</td>
+                                    <td>@item.SalesPerson</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
