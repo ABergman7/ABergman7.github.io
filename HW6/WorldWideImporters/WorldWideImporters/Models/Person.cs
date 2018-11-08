@@ -55,6 +55,7 @@ namespace WorldWideImporters.Models
             StockItemTransactions = new HashSet<StockItemTransaction>();
         }
 
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PersonID { get; set; }
 
