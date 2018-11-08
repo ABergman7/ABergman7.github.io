@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HW3"
+    "\\HW3",
+    "\\HW6",
+    "\\HW6\\WorldWideImporters",
+    "\\HW6\\WorldWideImporters\\packages",
+    "\\HW6\\WorldWideImporters\\WorldWideImporters",
+    "\\HW6\\WorldWideImporters\\WorldWideImporters\\Content",
+    "\\HW6\\WorldWideImporters\\WorldWideImporters\\Logo",
+    "\\HW6\\WorldWideImporters\\WorldWideImporters\\Views",
+    "\\HW6\\WorldWideImporters\\WorldWideImporters\\Views\\Home"
   ],
-  "SelectedNode": "\\HW3",
+  "SelectedNode": "\\HW6\\WorldWideImporters\\WorldWideImporters\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
