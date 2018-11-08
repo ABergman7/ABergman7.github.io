@@ -95,7 +95,7 @@
                     <h4>Gross Profit</h4>
                     <div class="cold-md-4">@Model.FirstOrDefault().Profits</div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -121,15 +121,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var item in Model.FirstOrDefault().Items)
+                            @if (Model.FirstOrDefault().Items != null)
                             {
-                                <tr>
-                                    <td>@item.StockItemID</td>
-                                    <td>@item.ItemDescription</td>
-                                    <td>@{string LineProfit = string.Format("{0:C2}", item.LineProfit);} @LineProfit</td>
-                                    <td>@item.SalesPerson</td>
-                                </tr>
+                                foreach(var item in Model.FirstOrDefault().Items)
+                                {
+                                    <tr>
+                                        <td>@item.StockItemID</td>
+                                        <td>@item.ItemDescription</td>
+                                        <td>@{string LineProfit = string.Format("{0:C2}", item.LineProfit);} @LineProfit</td>
+                                        <td>@item.SalesPerson</td>
+                                    </tr>
+                                }
                             }
+
                         </tbody>
                     </table>
                 </div>

@@ -113,18 +113,28 @@ namespace WorldWideImporters.Controllers
 
                 //Create Items list
                 List<ItemSearchVM> Items = new List<ItemSearchVM>();
-                //add to Items list
-                for(int i = 0; i < 10; i++)
-                    
-                {
-                    Items.Add(new ItemSearchVM
-                    {
-                        StockItemID = ItemDetails.ElementAt(i).StockItemID,
-                        ItemDescription = ItemDetails.ElementAt(i).Description,
-                        LineProfit = ItemDetails.ElementAt(i).LineProfit,
-                        SalesPerson = SalesRepDetails.ElementAt(i).FullName
 
-                    });
+
+
+                if (Items.FirstOrDefault() == null)
+                {
+                    return View(PersonDetails);
+                }
+                else
+                {
+                    //add to Items list
+                    for (int i = 0; i < 10; i++)
+
+                    {
+                        Items.Add(new ItemSearchVM
+                        {
+                            StockItemID = ItemDetails.ElementAt(i).StockItemID,
+                            ItemDescription = ItemDetails.ElementAt(i).Description,
+                            LineProfit = ItemDetails.ElementAt(i).LineProfit,
+                            SalesPerson = SalesRepDetails.ElementAt(i).FullName
+
+                        });
+                    }
                 }
 
                 List<PersonSearchVM> Customers = new List<PersonSearchVM>
