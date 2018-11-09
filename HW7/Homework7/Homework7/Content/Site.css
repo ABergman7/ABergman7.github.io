@@ -1,0 +1,31 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+.searchbar {
+    position: relative;
+}
+.content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: #5d616d;
+    border-radius: 10px;
+    margin: 20px;
+    opacity: .91;
+    color: white;
+}
