@@ -10,7 +10,6 @@ For this homework we were tasked with making an MVC 5 web application using a re
 
 1. [Assignment](http://www.wou.edu/~morses/classes/cs46x/assignments/HW6_1819.html)
 2. [Repository](https://github.com/ABergman7/ABergman7.github.io/tree/master/HW6/WorldWideImporters) 
-
 3. [Video](https://youtu.be/CdD9A6Hhw1Y)
 
 
@@ -133,8 +132,3 @@ Upon finishing the assignment We had to make a table of the top 10 items that th
     }
 </tbody>
 ```
-
-
-## Video
-<video width="1000" height="666" controls="controls">
-</video>
