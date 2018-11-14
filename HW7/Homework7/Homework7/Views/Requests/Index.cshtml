@@ -1,19 +1,31 @@
-﻿@model Homework7.Models.Request
+﻿@model IEnumerable<Homework7.Models.Request>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Home";
 }
-
-@using (Html.BeginForm("Index", "Home", FormMethod.Get))
-{
     <div class="row">
         <div class="col-md-12">
             <div class="content">
                 <div class="searchbar">
-                    <h3 class="text-center">Internet Language Translator</h3>
-                    @Html.TextBoxFor(x => x.RequestType, new { @class = "form-control", @placeholder = "Type some stuff",  })
+                    <h3 class="text-center">GIF MAD-LIBS!</h3>
+                    <input type="text" class="form-control" id="gifInput" name="gifInput" placeholder="Write a crazy sentence!" style="width:100%" />
                 </div>
             </div>
         </div>
     </div>
+
+<!-- Output-->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="output">
+
+        </div>
+    </div>
+</div>
+
+@section PageScript{
+    <script type="text/javascript" src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/giffyscript.js"></script>
+    
 }

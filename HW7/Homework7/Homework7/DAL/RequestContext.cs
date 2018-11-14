@@ -12,5 +12,9 @@ namespace Homework7.DAL
         public RequestContext() : base("name=RequestsDB")
         { }
         public virtual DbSet<Request> Requests { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+        }
     }
 }
