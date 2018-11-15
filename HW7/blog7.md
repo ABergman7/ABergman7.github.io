@@ -159,4 +159,4 @@ As for the code for the controller and the javascript file. We had to make the A
 ## Logging
 Finally after we implimented the webpage, we were supposed to use the database to log each request that was sent out. Here is a query of the last few reqeusts:
 
-![Picture4](HW7/Pictures/Query.PNG)
+![Picture4](/HW7/Pictures/Query.PNG)
