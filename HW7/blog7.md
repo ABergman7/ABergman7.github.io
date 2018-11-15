@@ -1,10 +1,10 @@
 ---
-title: Homework 6
+title: Homework 7
 layout: default
 ---
 # Software Engineering Homework
 
-## Homework 6
+## Homework 7
 
 For this homework we were tasked with making an MVC 5 web application using a relational database, and implementing javascript to handle requests from the page without needing to fully refreash the page.
 
