@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Auction.Models.Item>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Bid.ITEMID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seller.SELLERNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITEMNAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bid.ITEMID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seller.SELLERNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITEMNAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ITEMID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ITEMID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ITEMID })
+        </td>
+    </tr>
+}
+
+</table>
