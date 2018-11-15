@@ -13,7 +13,7 @@ $("#gifInput").keydown(function (event) {
        // console.log(req);
         var reqList = req.split(" ");
         var reqLast = reqList.pop();
-       // console.log(reqList);
+       // console.log(reqLast);
         var reqLen = reqList.length;
         // Init as "in it" not initialize (borrowed haskell terminology)
         var reqInit = reqList[reqLen - 1];
