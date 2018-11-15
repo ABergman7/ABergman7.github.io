@@ -13,22 +13,22 @@ For this homework we were tasked with making an MVC 5 web application using a re
 
 
 ## Final Product
-<video width="1000" height="666" controls="controls">
+<video width="700" height="666" controls="controls">
   <source src="/HW7/Pictures/HW7.mp4" type="video/mp4" />
 </video>
 
 ## Set Up
-  The database is nomrally the first thing that I begin to hammer out for homework assignments. As from the previous homeworks we impliment an up and down script for the data base, and then I scaffolded the model from there. 
+The database is nomrally the first thing that I begin to hammer out for homework assignments. As from the previous homeworks we impliment an up and down script for the data base, and then I scaffolded the model from there. 
 
 ![Picture](/HW7/Pictures/Database.PNG)
 
-    Aside from the Database we were tasked with using a private key from Giphy.com and putting that key in a private folder outside of the repository. Then we went into our Web.config file and re-adjusted our appsettings to read from the config file outside of our repo.
+Aside from the Database we were tasked with using a private key from Giphy.com and putting that key in a private folder outside of the repository. Then we went into our Web.config file and re-adjusted our appsettings to read from the config file outside of our repo.
 
 ![Picture2](/HW7/Pictures/config.PNG)
 
 
 ## Coding 
-    After setting up the appsettings, I went and made a blank controller and scoffolded a view from it. Then I went and made the controller to handle the API, since most of the work was done with the API controller we had to adjust the routes to each controller. 
+After setting up the appsettings, I went and made a blank controller and scoffolded a view from it. Then I went and made the controller to handle the API, since most of the work was done with the API controller we had to adjust the routes to each controller. 
 
 
 ### RouteConfig
@@ -54,7 +54,7 @@ For this homework we were tasked with making an MVC 5 web application using a re
         }
 ```
 
-    As for the code for the controller and the javascript file. We had to make the API controller use a JsonResult action method and was tasked with handleing the request as well as sending updates to the model. Meanwhile, the script was tasked with using ajax and making filters for words and outputting the lines back out to the view without needing to refreash the page.
+As for the code for the controller and the javascript file. We had to make the API controller use a JsonResult action method and was tasked with handleing the request as well as sending updates to the model. Meanwhile, the script was tasked with using ajax and making filters for words and outputting the lines back out to the view without needing to refreash the page.
 
 
 
@@ -157,6 +157,6 @@ For this homework we were tasked with making an MVC 5 web application using a re
 
 
 ## Logging
-    Finally after we implimented the webpage, we were supposed to use the database to log each request that was sent out. Here is a query of the last few reqeusts:
+Finally after we implimented the webpage, we were supposed to use the database to log each request that was sent out. Here is a query of the last few reqeusts:
 
 ![Picture4](HW7/Pictures/Query.PNG)
