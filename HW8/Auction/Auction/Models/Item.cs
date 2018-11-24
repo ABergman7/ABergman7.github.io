@@ -1,4 +1,4 @@
-namespace Auction.Models
+namespace Auction.DAL
 {
     using System;
     using System.Collections.Generic;
@@ -13,6 +13,9 @@ namespace Auction.Models
         [Required]
         [StringLength(128)]
         public string ITEMNAME { get; set; }
+
+        [Required]
+        public string ITEMDESC { get; set; }
 
         public int SELLERID { get; set; }
 

@@ -1,4 +1,4 @@
-namespace Auction.Models
+namespace Auction.DAL
 {
     using System;
     using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace Auction.Models
 
         public int BUYERID { get; set; }
 
-        public DateTime TIMESTAMP { get; set; }
+        public DateTime TIMESTAMP { get; set; } = DateTime.Now;
 
         public virtual Buyer Buyer { get; set; }
 

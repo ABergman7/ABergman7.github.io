@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Auction.Models;
+using Auction.DAL;
 
 namespace Auction.Controllers
 {
@@ -49,7 +49,7 @@ namespace Auction.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ITEMID,ITEMNAME,SELLERID")] Item item)
+        public ActionResult Create([Bind(Include = "ITEMID,ITEMNAME,ITEMDESC,SELLERID")] Item item)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace Auction.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ITEMID,ITEMNAME,SELLERID")] Item item)
+        public ActionResult Edit([Bind(Include = "ITEMID,ITEMNAME,ITEMDESC,SELLERID")] Item item)
         {
             if (ModelState.IsValid)
             {

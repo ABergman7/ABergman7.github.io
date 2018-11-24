@@ -1,4 +1,4 @@
-﻿@model Auction.Models.Item
+﻿@model Auction.DAL.Item
 
 @{
     ViewBag.Title = "Details";
@@ -32,6 +32,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.ITEMNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEMDESC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEMDESC)
         </dd>
 
     </dl>

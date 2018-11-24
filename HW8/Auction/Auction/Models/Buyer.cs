@@ -1,4 +1,4 @@
-namespace Auction.Models
+namespace Auction.DAL
 {
     using System;
     using System.Collections.Generic;
