@@ -1,4 +1,4 @@
-namespace Auction.DAL
+namespace Auction.Models
 {
     using System;
     using System.Data.Entity;
@@ -8,7 +8,7 @@ namespace Auction.DAL
     public partial class AuctionContext : DbContext
     {
         public AuctionContext()
-            : base("name=AuctionContext")
+            : base("name=Auction")
         {
         }
 
@@ -19,9 +19,7 @@ namespace Auction.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Bid>()
-                .Property(e => e.PRICE)
-                .HasPrecision(18, 0);
+ 
 
             modelBuilder.Entity<Buyer>()
                 .HasMany(e => e.Bids)
@@ -29,8 +27,9 @@ namespace Auction.DAL
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Item>()
-                .HasOptional(e => e.Bid)
-                .WithRequired(e => e.Item);
+                .HasMany(e => e.Bids)
+                .WithRequired(e => e.Item)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Seller>()
                 .HasMany(e => e.Items)

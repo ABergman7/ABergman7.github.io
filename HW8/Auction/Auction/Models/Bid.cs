@@ -1,4 +1,4 @@
-namespace Auction.DAL
+namespace Auction.Models
 {
     using System;
     using System.Collections.Generic;
@@ -6,20 +6,26 @@ namespace Auction.DAL
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+
+    [Table("Bids")]
     public partial class Bid
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int BIDID { get; set; }
+        
 
-        public decimal PRICE { get; set; }
+        public int BidID { get; set; }
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ITEMID { get; set; }
+        [Required]
+        [Display(Name = "Price")]
+        public decimal Price { get; set; }
+       
+        [Display(Name = "Item")]
+        public int ItemID { get; set; }
 
-        public int BUYERID { get; set; }
+        [Display(Name = "Buyer")]
+        public int BuyerID { get; set; }
 
-        public DateTime TIMESTAMP { get; set; } = DateTime.Now;
+        [Display(Name = "Time of Bid")]
+        public DateTime Timestamp { get; set; } = DateTime.Now;
 
         public virtual Buyer Buyer { get; set; }
 

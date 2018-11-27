@@ -1,4 +1,4 @@
-namespace Auction.DAL
+namespace Auction.Models
 {
     using System;
     using System.Collections.Generic;
@@ -6,6 +6,7 @@ namespace Auction.DAL
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Table("Buyers")]
     public partial class Buyer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -14,11 +15,11 @@ namespace Auction.DAL
             Bids = new HashSet<Bid>();
         }
 
-        public int BUYERID { get; set; }
+        public int BuyerID { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string BUYERNAME { get; set; }
+        [StringLength(50), Display(Name = "Buyer Name")]
+        public string Buyername { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bid> Bids { get; set; }

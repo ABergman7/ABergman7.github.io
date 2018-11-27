@@ -6,8 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Auction.DAL;
-
+using Auction.Models;
 namespace Auction.Controllers
 {
     public class ItemsController : Controller
@@ -17,7 +16,7 @@ namespace Auction.Controllers
         // GET: Items
         public ActionResult Index()
         {
-            var items = db.Items.Include(i => i.Bid).Include(i => i.Seller);
+            var items = db.Items.Include(i => i.Seller);
             return View(items.ToList());
         }
 
@@ -58,8 +57,8 @@ namespace Auction.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ITEMID = new SelectList(db.Bids, "ITEMID", "ITEMID", item.ITEMID);
-            ViewBag.SELLERID = new SelectList(db.Sellers, "SELLERID", "SELLERNAME", item.SELLERID);
+            ViewBag.ITEMID = new SelectList(db.Bids, "ITEMID", "ITEMID", item.ItemID);
+            ViewBag.SELLERID = new SelectList(db.Sellers, "SELLERID", "SELLERNAME", item.SellerID);
             return View(item);
         }
 
@@ -75,8 +74,8 @@ namespace Auction.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ITEMID = new SelectList(db.Bids, "ITEMID", "ITEMID", item.ITEMID);
-            ViewBag.SELLERID = new SelectList(db.Sellers, "SELLERID", "SELLERNAME", item.SELLERID);
+            ViewBag.ITEMID = new SelectList(db.Bids, "ITEMID", "ITEMID", item.ItemID);
+            ViewBag.SELLERID = new SelectList(db.Sellers, "SELLERID", "SELLERNAME", item.SellerID);
             return View(item);
         }
 
@@ -93,8 +92,8 @@ namespace Auction.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ITEMID = new SelectList(db.Bids, "ITEMID", "ITEMID", item.ITEMID);
-            ViewBag.SELLERID = new SelectList(db.Sellers, "SELLERID", "SELLERNAME", item.SELLERID);
+            ViewBag.ITEMID = new SelectList(db.Bids, "ITEMID", "ITEMID", item.ItemID);
+            ViewBag.SELLERID = new SelectList(db.Sellers, "SELLERID", "SELLERNAME", item.SellerID);
             return View(item);
         }
 
@@ -122,6 +121,15 @@ namespace Auction.Controllers
             db.Items.Remove(item);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public JsonResult BidResult(int? id)
+        {
+            var bids = db.Items.Where(i => i.ItemID == id).Select(b => b.Bids).FirstOrDefault()
+                .Select(b => new {b.Price, b.Buyer.Buyername}).OrderByDescending(b => b.Price).ToList();
+
+            
+            return Json(bids, JsonRequestBehavior.AllowGet);
         }
 
         protected override void Dispose(bool disposing)

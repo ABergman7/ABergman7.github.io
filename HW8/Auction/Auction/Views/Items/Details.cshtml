@@ -1,50 +1,71 @@
-﻿@model Auction.DAL.Item
+﻿@model Auction.Models.Item
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Item Details</h2>
 
 <div>
-    <h4>Item</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Bid.ITEMID)
+            @Html.DisplayNameFor(model => model.ItemID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Bid.ITEMID)
+            @Html.DisplayFor(model => model.ItemID)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Seller.SELLERNAME)
+            @Html.DisplayNameFor(model => model.Seller.Sellername)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Seller.SELLERNAME)
+            @Html.DisplayFor(model => model.Seller.Sellername)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ITEMNAME)
+            @Html.DisplayNameFor(model => model.Itemname)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ITEMNAME)
+            @Html.DisplayFor(model => model.Itemname)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ITEMDESC)
+            @Html.DisplayNameFor(model => model.Itemdesc)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ITEMDESC)
+            @Html.DisplayFor(model => model.Itemdesc)
         </dd>
 
     </dl>
 </div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h4>Current Bid On Items</h4>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Buyer Name</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody id="allBids"></tbody>
+        </table>
+    </div>
+</div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ITEMID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+@section PageScript{
+    <script type="text/javascript" src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Display.js"></script>
+}
+
+

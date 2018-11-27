@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Auction.DAL;
+using Auction.Models;
 
 namespace Auction.Controllers
 {
@@ -38,8 +38,8 @@ namespace Auction.Controllers
                 return RedirectToAction("Create");
             }
 
-            ViewBag.BUYERID = new SelectList(db.Buyers, "BUYERID", "BUYERNAME", bid.BUYERID);
-            ViewBag.ITEMID = new SelectList(db.Items, "ITEMID", "ITEMNAME", bid.ITEMID);
+            ViewBag.BUYERID = new SelectList(db.Buyers, "BUYERID", "BUYERNAME", bid.BuyerID);
+            ViewBag.ITEMID = new SelectList(db.Items, "ITEMID", "ITEMNAME", bid.ItemID);
             return View(bid);
         }
 
