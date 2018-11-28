@@ -11,7 +11,7 @@ layout: default
 
 ## Final Product
 <video width="700" height="666" controls="controls">
-  <source src="/HW8/Pictures/HW8.mp4" type="video/mp4" />
+  <source src="/HW8/Pictures/HW8p2.mp4" type="video/mp4" />
 </video>
 
 
