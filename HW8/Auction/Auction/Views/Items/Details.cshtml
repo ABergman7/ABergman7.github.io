@@ -45,27 +45,70 @@
 </div>
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-6">
         <h4>Current Bid On Items</h4>
-        <table class="table">
+        <table class="table" id="allBids">
             <thead>
             <tr>
-                <th>Buyer Name</th>
                 <th>Price</th>
+                <th>Buyer Name</th>
+
             </tr>
-            </thead>
-            <tbody id="allBids"></tbody>
+
+            <tbody></tbody>
         </table>
+       
+
     </div>
 </div>
+      
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
 
 @section PageScript{
-    <script type="text/javascript" src="~/Scripts/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/Display.js"></script>
+   @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript" >
+
+        
+        function ajax_call() {
+            var id = @Model.ItemID
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: '/Items/BidResult/' + id,
+                data: { id: id },
+                success: displayResults,
+                error: errorOnAjax
+            });
+        }
+
+        var interval = 1000 * 5; // where X is your timer interval in X seconds
+
+        window.setInterval(ajax_call(), interval);
+
+
+        function displayResults(data) {
+
+
+            var item = document.getElementById("allBids");
+            data.forEach(function(item) {
+
+                $('#allBids').find('tbody').append("<tr><td>"+item["Price"]+"</td><td>"+item["Buyername"]+"</tr>");
+
+            });
+
+            console.log(data);
+        };
+
+        function errorOnAjax() {
+            console.log("Ajax Error");
+        };
+
+
+
+    </script>
 }
 
 
