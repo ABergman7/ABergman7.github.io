@@ -90,8 +90,6 @@
 
         function displayResults(data) {
 
-
-            var item = document.getElementById("allBids");
             data.forEach(function(item) {
 
                 $('#allBids').find('tbody').append("<tr><td>"+item["Price"]+"</td><td>"+item["Buyername"]+"</td></tr>");
