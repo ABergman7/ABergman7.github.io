@@ -1,1 +1,1 @@
-# Austin Bergman CS460 Repository For Homework
+# Austin Bergman CS460 Repository
