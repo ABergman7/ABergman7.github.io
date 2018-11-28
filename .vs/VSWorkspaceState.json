@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HW3",
-    "\\HW6",
     "\\HW6\\WorldWideImporters",
     "\\HW6\\WorldWideImporters\\packages",
     "\\HW6\\WorldWideImporters\\WorldWideImporters",
     "\\HW6\\WorldWideImporters\\WorldWideImporters\\Content",
-    "\\HW6\\WorldWideImporters\\WorldWideImporters\\Logo",
-    "\\HW6\\WorldWideImporters\\WorldWideImporters\\Views",
-    "\\HW6\\WorldWideImporters\\WorldWideImporters\\Views\\Home"
+    "\\HW6\\WorldWideImporters\\WorldWideImporters\\Images",
+    "\\HW8",
+    "\\HW8\\Auction",
+    "\\HW8\\Auction\\Auction",
+    "\\HW8\\Auction\\Auction\\Images"
   ],
-  "SelectedNode": "\\HW6\\WorldWideImporters\\WorldWideImporters\\Views\\Home\\Index.cshtml",
+  "SelectedNode": "\\HW6",
   "PreviewInSolutionExplorer": false
 }

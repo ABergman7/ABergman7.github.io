@@ -1,0 +1,114 @@
+﻿@model Auction.Models.Item
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Item Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller.Sellername)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seller.Sellername)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Itemname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Itemname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Itemdesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Itemdesc)
+        </dd>
+
+    </dl>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4>Current Bid On Items</h4>
+        <table class="table" id="allBids">
+            <thead>
+            <tr>
+                <th>Price</th>
+                <th>Buyer Name</th>
+
+            </tr>
+
+            <tbody></tbody>
+        </table>
+       
+
+    </div>
+</div>
+      
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+@section PageScript{
+   @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript" >
+
+        
+        function ajax_call() {
+            var id = @Model.ItemID
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: '/Items/BidResult/' + id,
+                data: { id: id },
+                success: displayResults,
+                error: errorOnAjax
+            });
+        }
+
+        var interval = 1000 * 5; // where X is your timer interval in X seconds
+
+        window.setInterval(ajax_call(), interval);
+
+
+        function displayResults(data) {
+
+
+            var item = document.getElementById("allBids");
+            data.forEach(function(item) {
+
+                $('#allBids').find('tbody').append("<tr><td>"+item["Price"]+"</td><td>"+item["Buyername"]+"</tr>");
+
+            });
+
+            console.log(data);
+        };
+
+        function errorOnAjax() {
+            console.log("Ajax Error");
+        };
+
+
+
+    </script>
+}
+
+
