@@ -52,7 +52,6 @@
             <tr>
                 <th>Price</th>
                 <th>Buyer Name</th>
-
             </tr>
 
             <tbody></tbody>
@@ -73,7 +72,7 @@
 
         
         function ajax_call() {
-            var id = @Model.ItemID
+            var id = @Model.ItemID;
             $.ajax({
                 type: 'GET',
                 dataType: 'json',
@@ -95,7 +94,7 @@
             var item = document.getElementById("allBids");
             data.forEach(function(item) {
 
-                $('#allBids').find('tbody').append("<tr><td>"+item["Price"]+"</td><td>"+item["Buyername"]+"</tr>");
+                $('#allBids').find('tbody').append("<tr><td>"+item["Price"]+"</td><td>"+item["Buyername"]+"</td></tr>");
 
             });
 

@@ -31,3 +31,4 @@ All my code can be found in my personal [Repository](https://github.com/ABergman
 
 7.[Homework 7](HW7/blog7.md) : MVC application using AJAX and single table DB
 
+8.[HomeWork 8](HW8/blog8.md): Full MVC Web application
