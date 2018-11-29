@@ -46,20 +46,20 @@ Open up SQL Server Management Studios, then connect to the azure data base
  ![Picture](/HW9/Pictures/Step4.PNG)
 
 
- ### Step 4
+### Step 4
 Open Visual Studios then right click the solution in the solution explorer
 * Click Publish
 * Select Microsoft Azure App Service
 * Click "Select Existing"
 * Click "Publish"
 
-![Picture](/HW9/Pictures/publish1.PNG)
+![Picture](/HW9/Pictures/publish1.png)
 
-![Picture](/HW9/Pictures/publish2.PNG)
+![Picture](/HW9/Pictures/publish2.png)
 
-![Picture](/HW9/Pictures/publish3.PNG)
+![Picture](/HW9/Pictures/publish3.png)
 
-![Picture](/HW9/Pictures/PublishFinal.PNG)
+![Picture](/HW9/Pictures/PublishFinal.png)
 
 ### Step 5
 Open Azure Once Again:
@@ -74,6 +74,6 @@ Open Azure Once Again:
             * replace the "your_username" and "your_password" with the ones previously created, and get rid of brackets around them.
     * Click "Save"
 
-![Picture](/HW9/Pictures/lastStep1.PNG)
+![Picture](/HW9/Pictures/lastStep1.png)
 
-![Picture](/HW9/Pictures/lastStep2.PNG)
+![Picture](/HW9/Pictures/lastStep2.png)
