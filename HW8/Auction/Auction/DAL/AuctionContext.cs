@@ -19,7 +19,7 @@ namespace Auction.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
- 
+
 
             modelBuilder.Entity<Buyer>()
                 .HasMany(e => e.Bids)

@@ -126,9 +126,9 @@ namespace Auction.Controllers
         public JsonResult BidResult(int? id)
         {
             var bids = db.Items.Where(i => i.ItemID == id).Select(b => b.Bids).FirstOrDefault()
-                .Select(b => new {b.Price, b.Buyer.Buyername}).OrderByDescending(b => b.Price).ToList();
+                .Select(b => new { b.Price, b.Buyer.Buyername }).OrderByDescending(b => b.Price).ToList();
 
-            
+
             return Json(bids, JsonRequestBehavior.AllowGet);
         }
 

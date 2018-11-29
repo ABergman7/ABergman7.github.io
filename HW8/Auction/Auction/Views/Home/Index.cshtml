@@ -6,8 +6,8 @@
 
 <div class="jumbotron">
     <h1>Reginald's Ancient Antiquities Auction House</h1>
-   
-    
+
+
 </div>
 
 <div class="row">
@@ -42,35 +42,35 @@
                 <th></th>
             </tr>
             <tbody>
-            @foreach (var bid in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => bid.ItemID)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => bid.Item.Itemname)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => bid.Buyer.Buyername)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => bid.Price)
-                    </td>
-                    <td>
-                        @if (bid.Timestamp.Date == DateTime.Today)
-                        {
-                            DateTime todayTime = bid.Timestamp;
-                            @todayTime.ToString("h:mm:ss tt")
-                        }
-                        else
-                        {
-                            @Html.DisplayFor(modelItem => bid.Timestamp)
-                        }
+                @foreach (var bid in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => bid.ItemID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => bid.Item.Itemname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => bid.Buyer.Buyername)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => bid.Price)
+                        </td>
+                        <td>
+                            @if (bid.Timestamp.Date == DateTime.Today)
+                            {
+                                DateTime todayTime = bid.Timestamp;
+                                @todayTime.ToString("h:mm:ss tt")
+                            }
+                            else
+                            {
+                                @Html.DisplayFor(modelItem => bid.Timestamp)
+                            }
 
-                    </td>
-                </tr>
-            }
+                        </td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>

@@ -10,14 +10,14 @@ namespace Auction.Models
     [Table("Bids")]
     public partial class Bid
     {
-        
+
 
         public int BidID { get; set; }
 
         [Required]
         [Display(Name = "Price")]
         public decimal Price { get; set; }
-       
+
         [Display(Name = "Item")]
         public int ItemID { get; set; }
 

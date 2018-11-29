@@ -1,7 +1,9 @@
 ﻿@model Auction.Models.Item
 
 @{
-    ViewBag.Title = "Details";
+                /**/
+
+                ViewBag.Title = "Details";
 }
 
 <h2>Item Details</h2>
@@ -49,28 +51,28 @@
         <h4>Current Bid On Items</h4>
         <table class="table" id="allBids">
             <thead>
-            <tr>
-                <th>Price</th>
-                <th>Buyer Name</th>
-            </tr>
+                <tr>
+                    <th>Price</th>
+                    <th>Buyer Name</th>
+                </tr>
 
             <tbody></tbody>
         </table>
-       
+
 
     </div>
 </div>
-      
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
 
 @section PageScript{
-   @Scripts.Render("~/bundles/jquery")
-    <script type="text/javascript" >
+    @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript">
 
-        
+
         function ajax_call() {
             var id = @Model.ItemID;
             $.ajax({

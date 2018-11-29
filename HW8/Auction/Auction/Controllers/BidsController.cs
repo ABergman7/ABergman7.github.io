@@ -14,7 +14,7 @@ namespace Auction.Controllers
     {
         private AuctionContext db = new AuctionContext();
 
-     
+
 
         // GET: Bids/Create
         public ActionResult Create()
