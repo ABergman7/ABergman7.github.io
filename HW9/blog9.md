@@ -4,12 +4,11 @@ layout: default
 ---
 # Software Engineering Homework
 
-[Final Product](https://abergmanhw9.azurewebsites.net/)
-
 ## Homework 9
 
 For this blog I will give a step by step instruction on how to deploy to Azure web services.
 
+[Final Product](https://abergmanhw9.azurewebsites.net/)
 
 ### Step 1
 Begin by logging on to Azure and clicking on SQL Databases:
