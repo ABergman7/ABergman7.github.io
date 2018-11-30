@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Art.Models.Artist>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ARTISTNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ARTISTDOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BIRTHCITY)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ARTISTNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ARTISTDOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BIRTHCITY)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ARTISTID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ARTISTID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ARTISTID })
+        </td>
+    </tr>
+}
+
+</table>

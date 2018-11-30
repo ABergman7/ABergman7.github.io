@@ -1,0 +1,42 @@
+﻿@model Art.Models.Artist
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Artist</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ARTISTNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ARTISTNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ARTISTDOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ARTISTDOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BIRTHCITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BIRTHCITY)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ARTISTID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
