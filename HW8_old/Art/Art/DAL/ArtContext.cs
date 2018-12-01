@@ -8,7 +8,7 @@ namespace Art.Models
     public partial class ArtContext : DbContext
     {
         public ArtContext()
-            : base("name=ArtContext")
+            : base("name=ArtDB")
         {
         }
 

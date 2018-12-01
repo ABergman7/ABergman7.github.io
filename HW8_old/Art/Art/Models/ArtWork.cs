@@ -17,7 +17,7 @@ namespace Art.Models
         public int ARTWORKID { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(50),Display(Name = "Title")]
         public string ARTWORKTITLE { get; set; }
 
         public int ARTISTID { get; set; }
