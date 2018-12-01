@@ -53,7 +53,7 @@ INSERT INTO [dbo].[ArtWorks] (ARTWORKTITLE, ARTISTID) VALUES
 ('Mona Lisa', '2'),
 ('The Vitruvian Man', '2'),
 ('Ebru', '3'),
-('Honey Is Sweeter Than Blood', '3');
+('Honey Is Sweeter Than Blood', '4');
 
 INSERT INTO [dbo].[Genres](GENRENAME) VALUES
 ('Tesselation'),
