@@ -80,7 +80,41 @@ namespace Art.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ARTISTID,ARTISTNAME,ARTISTDOB,BIRTHCITY")] Artist artist)
         {
-            if (ModelState.IsValid)
+            if (artist.ARTISTNAME.Length > 50)
+            {
+                TempData["testmsg"] = "<script>alert('The name cannot be more than 50 characters!');</script>";
+                return RedirectToAction("Edit");
+            }
+
+            string[] dob = artist.ARTISTDOB.Split('/');
+
+            int month = Int32.Parse(dob[0]);
+            int day = Int32.Parse(dob[1]);
+            int year = Int32.Parse(dob[2]);
+
+
+            int mm = DateTime.Now.Month;
+            int dd = DateTime.Now.Day;
+            int yyyy = DateTime.Now.Year;
+
+
+            if (year > yyyy)
+            {
+                TempData["testmsg"] = "<script>alert('Incorrect Birthday');</script>";
+                return RedirectToAction("Edit");
+            }
+            else if (year == yyyy && month > mm)
+            {
+                TempData["testmsg"] = "<script>alert('Incorrect Birthday');</script>";
+                return RedirectToAction("Edit");
+            }
+            else if (year == yyyy && month == mm && day > dd)
+            {
+                TempData["testmsg"] = "<script>alert('Incorrect Birthday');</script>";
+                return RedirectToAction("Edit");
+            }
+
+            else if (ModelState.IsValid)
             {
                 db.Entry(artist).State = EntityState.Modified;
                 db.SaveChanges();
