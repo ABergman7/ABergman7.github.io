@@ -4,7 +4,7 @@ layout: default
 ---
 
 ## Notes
-
+YOUR WEB-APP AND DATABASE ARE ALREADY MADE ON THE CLOUD
 
 ### STEPS 
 1. Make your database ERD then the database
