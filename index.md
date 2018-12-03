@@ -34,3 +34,5 @@ All my code can be found in my personal [Repository](https://github.com/ABergman
 8.[HomeWork 8](HW8/blog8.md): Full MVC Web application
 
 9.[Homework 9](HW9/blog9.md): Azure Web Deployment
+
+10 [Notes to Self](/mynotes.md)
